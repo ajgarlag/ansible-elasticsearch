@@ -1,0 +1,6 @@
+---
+# handlers file for ajgarlag.elasticsearch
+- name: restart elasticsearch
+  service:
+    name: elasticsearch
+    state: restarted

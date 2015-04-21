@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - role: ajgarlag.elasticsearch
+      ajgarlag_elasticsearch_plugins:
+        "head": "mobz/elasticsearch-head"
+      ajgarlag_elasticsearch_settings:
+        "network.host": "127.0.0.1"

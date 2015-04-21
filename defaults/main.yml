@@ -1,0 +1,14 @@
+---
+# defaults file for ajgarlag.elasticsearch
+ajgarlag_elasticsearch_minor_version: 1.5
+
+ajgarlag_elasticsearch_java_package: openjdk-7-jre-headless
+
+ajgarlag_elasticsearch_autostart: yes
+
+ajgarlag_elasticsearch_settings: {}
+# "network.host": "127.0.0.1"
+# "http.cors.enabled": "true"
+
+ajgarlag_elasticsearch_plugins: {}
+# "head": "mobz/elasticsearch-head"
