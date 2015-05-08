@@ -29,7 +29,8 @@
 - name: setting elasticsearch autostart option
   service:
     name: elasticsearch
-    enabled: "{{ ajgarlag_elasticsearch_autostart }}"
+    enabled: '{{ ajgarlag_elasticsearch_autostart }}'
+    state: '{% if ajgarlag_elasticsearch_autostart %}started{% else %}stopped{% endif %}'
 
 - name: configuring elasticsearch
   lineinfile:
