@@ -26,12 +26,6 @@
     pkg: elasticsearch
     state: latest
 
-- name: setting elasticsearch autostart option
-  service:
-    name: elasticsearch
-    enabled: '{{ ajgarlag_elasticsearch_autostart }}'
-    state: '{% if ajgarlag_elasticsearch_autostart %}started{% else %}stopped{% endif %}'
-
 - name: configuring elasticsearch
   lineinfile:
     dest: /etc/elasticsearch/elasticsearch.yml
@@ -46,3 +40,10 @@
   args:
         creates: /usr/share/elasticsearch/plugins/{{ item.key }}
   with_dict: ajgarlag_elasticsearch_plugins
+
+- name: setting elasticsearch to autostart
+  service:
+    name: elasticsearch
+    enabled: yes
+  notify:
+    - restart elasticsearch
