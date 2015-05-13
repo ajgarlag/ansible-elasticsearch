@@ -13,11 +13,6 @@ Role Variables
 * **ajgarlag_elasticsearch_settings**: Dict of parameters to write into the elasticsearch config file (defaults to `{}`).
 * **ajgarlag_elasticsearch_plugins**: Dict of plugins to install (defaults to `{}`).
 
-Dependencies
-------------
-
-* **ajgarlag.bootstrap**: Ansible role to perform some basic setup to execute other ansible roles.
-
 Example Playbook
 ----------------
 
